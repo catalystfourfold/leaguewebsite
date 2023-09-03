@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+.opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+}
+
+p {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+img {
+    max-width: 30%;
+    margin: 5px;
+    border-radius: 10px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+h3 {
+    color: #000000;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 10px;
+    padding-left: 10px;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; 
+}
+
+.rounded-rectangle {
+    border-radius: 10px;
+    background-color: #e25954;
+    padding: 26px;
+    text-align: center;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.subtitle {
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+  
+nav {
+    font-family: monospace;
+    width: 100%;
+    margin-top: 20px;
+}
+  
+nav ul {
+    background: rgb(46, 41, 33);
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+}
+  
+nav li {
+    color: #fff;
+    background: rgb(46, 41, 33);
+    display: block;
+    float: left;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    font-size: 18px;
+    z-index: 1000;
+}
+    
+nav li a {
+    color: #fff;
+}
+  
+nav li:hover,
+nav li:focus-within {
+    background: rgb(66, 60, 50);
+    cursor: pointer;
+}
+  
+nav li:focus-within a {
+    outline: none;
+}
+  
+nav ul li ul {
+    background: rgb(46, 41, 33);
+    visibility: hidden;
+    opacity: 0;
+    min-width: 120px;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+  
+nav ul li:hover > ul,
+nav ul li:focus-within > ul,
+nav ul li ul:hover,
+nav ul li ul:focus {
+     visibility: visible;
+     opacity: 1;
+     display: block;
+}
+  
+nav ul li ul li {
+    clear: both;
+    width: 100%;
+}
+
+.lower-container {
+    display: flex;
+    flex: 1;
+}
+
+.container-left {
+    flex: 70%; 
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-right {
+    flex: 30%; 
+    background-color: #e0e0e0; 
+}
+
+.sidebar {
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #cacaca;
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+}
+
+.styled-button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.pushoffright {
+    margin-right: 8px;
+}
+
+.blue {
+    background-color: #3498db;
+}
+
+.red {
+    background-color: #e75339;
+}
+
+.green {
+    background-color: #2ddb76;
+}
+
+.black {
+    background-color: #303030;
+}
+
+.blue:hover {
+    background-color: #2980b9;
+}
+
+.red:hover {
+    background-color: #db462c;
+}
+
+.green:hover {
+    background-color: #22ca68;
+}
+
+.black:hover {
+    background-color: #464646;
+}
+
+.pagetitle {
+    width: 100%; 
+    position: relative;
+    border-radius: 10px;
+    border: 3px solid #a1a1a1; 
+    background-color: #a1a1a1;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagetitle h2 {
+    margin-left: 20px;
+}
+
+.pagetitle .styled-button {
+    margin-right: 10px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.bubble {
+    width: 100%; 
+    position: relative;
+    background: linear-gradient(to bottom, #cacaca 50%, #ffffff 50%);
+    border-radius: 10px;
+    border: 3px solid #cacaca; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.upper-half {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #cacaca;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lower-half {
+    background-color: #ffffff;
+}
+
+.solo-bubble {
+    width: 100%; 
+    position: relative;
+    border-radius: 10px;
+    border: 3px solid #cacaca; 
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.solo-bubble p {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.link-item {
+    margin-bottom: 15px;
+}
+
+.link {
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.form {
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #000000;
+}
+
+table {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, td {
+    border: 1px solid #cacaca;
+    padding: 8px;
+}
+
+.link-bubble {
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #488fca;
+    background-color: #488fca;
+    margin: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 22px;
+}
+
+.link-bubble a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+#division-form {
+    padding-left: 25px;
+}
+
+select, option {
+    font-size: 14px;
+}
+
+input {
+    width: 15px;
+}
+
+.long-input {
+    width: 35px;
+}
