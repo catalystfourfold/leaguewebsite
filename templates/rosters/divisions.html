@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="pagetitle nunito">
+        <h2>Divisions</h2>
+        <form id="division-form" class="opensans">
+            <label for="division-select" class="opensans">Select Division:</label>
+            <select id="division-select" class="opensans">
+                <option value="">Select a Division</option>
+                {% for division in divisions reversed %}
+                    <option value="{{ division.id }}">{{ division.name }}</option>
+                {% endfor %}
+            </select>
+        </form>
+        <div class="button-container">
+            <a href="{% url 'add-division' %}" class="styled-button black">Add Division</a>
+            <a href="{% url 'add-team' %}" class="styled-button black">Add Team</a>
+        </div>   
+    </div>
+    
+    <div id="teams-container" class="solo-bubble">
+        <!-- Teams will be dynamically loaded here -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#division-select').change(function () {
+                var divisionId = $(this).val();
+                if (divisionId) {
+                    $.ajax({
+                        type: 'GET',
+                        url: `/rosters/teams/?division=${divisionId}`,
+                        success: function (data) {
+                            var teamsHtml = '';
+                            data.teams.forEach(function (team) {
+                                var teamDetailUrl = `/rosters/team/${team.id}/`; 
+                                teamsHtml += `<a href="${teamDetailUrl}" class="styled-button blue">${team.name}</a>`;
+                            });
+                            $('#teams-container').html(teamsHtml);
+                        },
+                    });
+                } else {
+                    $('#teams-container').html('');
+                }
+            });
+        });
+    </script>
+{% endblock %}

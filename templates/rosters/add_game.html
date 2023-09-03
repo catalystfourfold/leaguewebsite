@@ -1,0 +1,13 @@
+<h2>Add Game</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.date.label_tag }} {{ form.date }}
+    {{ form.day.label_tag }} {{ form.day }}
+    {{ form.time.label_tag }} {{ form.time }}
+    {{ form.status.label_tag }} {{ form.status }}
+    {{ form.score.label_tag }} {{ form.score }}
+    {{ form.visitors.label_tag }} {{ form.visitors }}
+    {{ form.home.label_tag }} {{ form.home }}
+    {{ form.venue.label_tag }} {{ form.venue }}
+    <button type="submit">Add Game</button>
+</form>

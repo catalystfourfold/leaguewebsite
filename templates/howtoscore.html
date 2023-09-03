@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="pagetitle nunito">
+    <h2>How to Score</h2>
+  </div>
+  <div class="solo-bubble nunito" id="info">
+    <p>A scorer will give an error to a fielder if the play could have been made with "<b>ordinary effort</b>," meaning that a player of average skill could have caught or fielded the ball given the field and weather conditions.</p>
+    </br>
+    <p><b>Ways of Making an Out</b></p> 
+    <table>
+        <tr>
+            <th>Result</th>
+            <th>Abbreviation</th>
+            <th>Example Result</th>
+            <th>Example Abbreviation</th>
+        </tr>
+        <tr>
+            <td>Strikeout Swinging</td>
+            <td>K</td>
+            <td>Swing and a miss</td>
+            <td>K</td>
+        </tr>
+        <tr>
+            <td>Strikeout Looking</td>
+            <td>Backwards K</td>
+            <td>Called 3rd strike</td>
+            <td>Backwards K</td>
+        </tr>
+        <tr>
+            <td>Groundout</td>
+            <td>The position number of the player who fielded it followed by the number of the player who caught it</td>
+            <td>Shortstop fields it and throws to the First Baseman/td>
+            <td>6-3</td>
+        </tr>
+        <tr>
+            <td>Flyout</td>
+            <td>The number of the player who caught it</td>
+            <td>Center Fielder catches it</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Lineout</td>
+            <td>L followed by the number of the player who caught it</td>
+            <td>2nd Baseman catches it</td>
+            <td>L4</td>
+        </tr>
+        <tr>
+            <td>Unassisted Play</td>
+            <td>The number of the player who made the play followed by U</td>
+            <td>Pitcher fields it and tags the runner (or the base)</td>
+            <td>1U</td>
+        </tr>
+        <tr>
+            <td>Caught Foul Ball</td>
+            <td>F followed by the number of the player who caught it</td>
+            <td>3rd Baseman catches it in foul territory</td>
+            <td>F5</td>
+        </tr>
+        <tr>
+            <td>Sacrifice Fly</td>
+            <td>SF followed by the number of the player who caught it</td>
+            <td>Left Fielder catches it</td>
+            <td>SF7</td>
+        </tr>
+        <tr>
+            <td>Sacrifice Bunt</td>
+            <td>SB followed by the number of the player who fielded it followed by the number of the player who caught it</td>
+            <td>Catcher fields it and throws to the First Baseman</td>
+            <td>SB2-3</td>
+        </tr>
+        <tr>
+            <td>Double Play (Runner)</td>
+            <td>The number of the player who fielded it followed by the number of the player who caught it</td>
+            <td>Shortstop fields it and throws it to the Second Baseman</td>
+            <td>6-4</td>
+        </tr>
+        <tr>
+            <td>Double Play (Batter)</td>
+            <td>The same as the runner, but add in the player who catches the ball next followed by DP</td>
+            <td>Shortstop fields it and throws it to the Second Baseman who throws it to the First Baseman</td>
+            <td>6-4-3 DP</td>
+        </tr>
+    </table> 
+    <p><b>Tracking Hits</b></p> 
+    <table>
+        <tr>
+            <th>Result</th>
+            <th>Abbreviation</th>
+            <th>Example Result</th>
+            <th>Example Abbreviation</th>
+        </tr>
+        <tr>
+            <td>Single</td>
+            <td>1B</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Double</td>
+            <td>2B</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Triple</td>
+            <td>3B</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Home Run</td>
+            <td>HR</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Hit By Pitch</td>
+            <td>HP or HBP</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Walk</td>
+            <td>BB</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Error</td>
+            <td>E followed by the number of the player who committed the error</td>
+            <td>The shortstop bobbles the ball and throws it away</td>
+            <td>E6</td>
+        </tr>
+        <tr>
+            <td>Fielder's Choice</td>
+            <td>FC</td>
+            <td>With a runner on first, a grounder is hit to the second baseman who only gets the lead runner out (the fielder has made a choice not to try to get the batsman out).</td>
+            <td>FC</td>
+        </tr>
+        <tr>
+            <td>Dropped Third Strike</td>
+            <td>K</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table> 
+    <p><b>Tracking Base Running</b></p> 
+    <table>
+        <tr>
+            <th>Result</th>
+            <th>Abbreviation</th>
+            <th>Example Result</th>
+            <th>Example Abbreviation</th>
+        </tr>
+        <tr>
+            <td>Stolen Base</td>
+            <td>SB</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Caught Stealing</td>
+            <td>CS</td>
+            <td>Thrown out by the catcher while attempting to steal	</td>
+            <td>CS</td>
+        </tr>
+        <tr>
+            <td>Picked Off</td>
+            <td>PIK</td>
+            <td>Picked off by the pitcher</td>
+            <td>PIK</td>
+        </tr>
+    </table> 
+    <p><b>Scoring RBIs</b></p> 
+    </br>
+    <p><u>Score an RBI for balls put in play</u></p> 
+    </br>
+    <p>Score an RBI for the batter when a runner scores as the result of a safe hit, a sacrifice bunt, a sacrifice fly, an infield out, or a fielder's choice out.</p>
+    </br>
+    <p><u>Score an RBI for a walk</u></p> 
+    </br>
+    <p>Score an RBI for the batter when the bases are full and the batter is awarded first base because of a base on balls, because they are hit by a pitch, or because of interference or obstruction.</p>
+    </br>
+    <p><u>Don't score an RBI for double plays</u></p> 
+    </br>
+    <p>Don't score an RBI for the batter when a runner scores during a force double play or a reverse-force double play.</p>
+    </br>
+    <p><u>Scoring an RBI on an error</u></p> 
+    </br>
+    <p>Don't score an RBI for the batter when a run scores because of an error committed by the fielding team that would've completed a force double play. </p>
+    </br>
+    <p>Score an RBI for the batter when there is only one out and the fielding team commits an error on a play during which a runner on third base would have scored despite the error.  Score an RBI for the batter when a fielder holds the ball or throws it to the wrong base if the runner keeps going. If the runner stops and, upon noticing the error, starts running again, the run is scored as a fielder's choice rather than an RBI.  Score an RBI for the batter if an error is made on a play but the official scorer determines that the run would've scored regardless of the error.</p>
+  </div>
+{% endblock %}

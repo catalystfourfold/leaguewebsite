@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="pagetitle nunito">
+        <h2>Editing Team</h2>
+    </div>
+    <div class="bubble opensans">
+        <div class="upper-half">
+            <h3>Players</h3>
+        </div>
+        <div class="lower-half">
+            <form method="post">
+                {% csrf_token %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>AVG</th>
+                            <th>GP</th>
+                            <th>GS</th>
+                            <th>PA</th>
+                            <th>AB</th>
+                            <th>R</th>
+                            <th>H</th>
+                            <th>2B</th>
+                            <th>3B</th>
+                            <th>HR</th>
+                            <th>RBI</th>
+                            <th>BB</th>
+                            <th>K</th>
+                            <th>HBP</th>
+                            <th>IBB</th>
+                            <th>SB</th>
+                            <th>CS</th>
+                            <th>SH</th>
+                            <th>SF</th>
+                            <th>DP</th>
+                            <th>ROE</th>
+                            <th>FC</th>
+                            <th>LOB</th>
+                            <th>TB</th>
+                            <th>OBP</th>
+                            <th>SLG</th>
+                            <th>OPS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for player in players %}
+                            <tr>
+                                <td>{{ player.name }}</td>
+                                <td><input type="text" name="avg_{{ player.id }}" value="{{ player.avg }}" class="long-input"></td>
+                                <td><input type="text" name="gp_{{ player.id }}" value="{{ player.gp }}"></td>
+                                <td><input type="text" name="gs_{{ player.id }}" value="{{ player.gs }}"></td>
+                                <td><input type="text" name="pa_{{ player.id }}" value="{{ player.pa }}"></td>
+                                <td><input type="text" name="ab_{{ player.id }}" value="{{ player.ab }}"></td>
+                                <td><input type="text" name="r_{{ player.id }}" value="{{ player.r }}"></td>
+                                <td><input type="text" name="h_{{ player.id }}" value="{{ player.h }}"></td>
+                                <td><input type="text" name="2b_{{ player.id }}" value="{{ player.twob }}"></td>
+                                <td><input type="text" name="3b_{{ player.id }}" value="{{ player.threeb }}"></td>
+                                <td><input type="text" name="hr_{{ player.id }}" value="{{ player.hr }}"></td>
+                                <td><input type="text" name="rbi_{{ player.id }}" value="{{ player.rbi }}"></td>
+                                <td><input type="text" name="bb_{{ player.id }}" value="{{ player.bb }}"></td>
+                                <td><input type="text" name="k_{{ player.id }}" value="{{ player.k }}"></td>
+                                <td><input type="text" name="hbp_{{ player.id }}" value="{{ player.hbp }}"></td>
+                                <td><input type="text" name="ibb_{{ player.id }}" value="{{ player.ibb }}"></td>
+                                <td><input type="text" name="sb_{{ player.id }}" value="{{ player.sb }}"></td>
+                                <td><input type="text" name="cs_{{ player.id }}" value="{{ player.cs }}"></td>
+                                <td><input type="text" name="sh_{{ player.id }}" value="{{ player.sh }}"></td>
+                                <td><input type="text" name="sf_{{ player.id }}" value="{{ player.sf }}"></td>
+                                <td><input type="text" name="dp_{{ player.id }}" value="{{ player.dp }}"></td>
+                                <td><input type="text" name="roe_{{ player.id }}" value="{{ player.roe }}"></td>
+                                <td><input type="text" name="fc_{{ player.id }}" value="{{ player.fc }}"></td>
+                                <td><input type="text" name="lob_{{ player.id }}" value="{{ player.lob }}"></td>
+                                <td><input type="text" name="tb_{{ player.id }}" value="{{ player.tb }}"></td>
+                                <td><input type="text" name="obp_{{ player.id }}" value="{{ player.obp }}" class="long-input"></td>
+                                <td><input type="text" name="slg_{{ player.id }}" value="{{ player.slg }}" class="long-input"></td>
+                                <td><input type="text" name="ops_{{ player.id }}" value="{{ player.ops }}" class="long-input"></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <button type="submit" class="styled-button black">Save Changes</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

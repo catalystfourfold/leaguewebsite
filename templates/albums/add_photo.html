@@ -1,0 +1,6 @@
+<h2>Add Photo</h2>
+<form method="post" enctype="multipart/form-data" action="{% url 'add_photo' album_id=album.id %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add Photo</button>
+</form>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ album.title }}</h1>
+
+  <h2>Photos in {{ album.title }}</h2>
+  <ul>
+    {% for photo in photos %}
+      <li>
+        <img src="{{ photo.image.url }}" alt="{{ photo.caption }}">
+        <p>{{ photo.caption }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h2>Add Photo</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Photo</button>
+  </form>
+{% endblock %}

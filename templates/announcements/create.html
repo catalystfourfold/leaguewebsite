@@ -1,0 +1,6 @@
+<h2>Create an Announcement</h2>
+<form method="post" action="{% url 'announcements:create' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Post Announcement</button>
+</form>

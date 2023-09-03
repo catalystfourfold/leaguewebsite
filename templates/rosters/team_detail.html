@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="pagetitle nunito">
+        <h2>{{ team.name }} - {{ division.name }}</h2>
+    </div>
+    <div class="bubble opensans">
+        <div class="upper-half">
+            <h3>Players</h3>
+            <div>
+                <a href="{% url 'add-player' division.id %}" class="styled-button black pushoffright">Add Player</a>
+                <a href="{% url 'edit-player-stats' %}" class="styled-button black pushoffright">Edit Player Stats</a>
+            </div>
+        </div>
+        <div class="lower-half">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>AVG</th>
+                    <th>GP</th>
+                    <th>GS</th>
+                    <th>PA</th>
+                    <th>AB</th>
+                    <th>R</th>
+                    <th>H</th>
+                    <th>2B</th>
+                    <th>3B</th>
+                    <th>HR</th>
+                    <th>RBI</th>
+                    <th>BB</th>
+                    <th>K</th>
+                    <th>HBP</th>
+                    <th>IBB</th>
+                    <th>SB</th>
+                    <th>CS</th>
+                    <th>SH</th>
+                    <th>SF</th>
+                    <th>DP</th>
+                    <th>ROE</th>
+                    <th>FC</th>
+                    <th>LOB</th>
+                    <th>TB</th>
+                    <th>OBP</th>
+                    <th>SLG</th>
+                    <th>OPS</th>
+                </tr>
+                {% for player in players %}
+                    <tr>
+                        <td>{{ player.name }}</td>
+                        <td>{{ player.avg }}</td>
+                        <td>{{ player.gp }}</td>
+                        <td>{{ player.gs }}</td>
+                        <td>{{ player.pa }}</td>
+                        <td>{{ player.ab }}</td>
+                        <td>{{ player.r }}</td>
+                        <td>{{ player.h }}</td>
+                        <td>{{ player.twob }}</td>
+                        <td>{{ player.threeb }}</td>
+                        <td>{{ player.hr }}</td>
+                        <td>{{ player.rbi }}</td>
+                        <td>{{ player.bb }}</td>
+                        <td>{{ player.k }}</td>
+                        <td>{{ player.hbp }}</td>
+                        <td>{{ player.ibb }}</td>
+                        <td>{{ player.sb }}</td>
+                        <td>{{ player.cs }}</td>
+                        <td>{{ player.sh }}</td>
+                        <td>{{ player.sf }}</td>
+                        <td>{{ player.dp }}</td>
+                        <td>{{ player.roe }}</td>
+                        <td>{{ player.fc }}</td>
+                        <td>{{ player.lob }}</td>
+                        <td>{{ player.tb }}</td>
+                        <td>{{ player.obp }}</td>
+                        <td>{{ player.slg }}</td>
+                        <td>{{ player.ops }}</td>
+                    </tr>
+                {% endfor %}
+            </table> 
+        </div>
+    </div>
+    
+{% endblock %}

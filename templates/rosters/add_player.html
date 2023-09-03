@@ -1,0 +1,15 @@
+<h2>Add Team</h2>
+<form method="post" action="{% url 'add-player' division_id %}">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <label for="{{ form.team.id_for_label }}">Select Team:</label>
+    <select name="{{ form.team.name }}" id="{{ form.team.id_for_label }}">
+        <option value="">---------</option>
+        {% for team in form.team.field.queryset %}
+            <option value="{{ team.pk }}">{{ team.division.name }} - {{ team.name }}</option>
+        {% endfor %}
+    </select>
+    {{ form.name.label_tag }}
+    {{ form.name }}
+    <button type="submit">Add Player</button>
+</form>
