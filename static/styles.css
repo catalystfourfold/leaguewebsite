@@ -49,6 +49,16 @@ h3 {
     padding-left: 10px;
 }
 
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #ffffff; 
+    margin-left: 3px; 
+}
+
 .centered-container {
     display: flex;
     flex-direction: column;
@@ -173,13 +183,14 @@ nav ul li ul li {
     margin: 20px;
     padding: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .styled-button {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 18px;
     background-color: #3498db;
     color: #ffffff;
     text-decoration: none;
@@ -191,8 +202,20 @@ nav ul li ul li {
     cursor: pointer;
 }
 
+.flex {
+    display: flex;
+}
+
+.fifty{
+    width: 50%;
+}
+
 .pushoffright {
     margin-right: 8px;
+}
+
+.pushofftop {
+    margin-top: 7px;
 }
 
 .blue {
@@ -365,4 +388,8 @@ input {
 
 .long-input {
     width: 35px;
+}
+
+.contact {
+    font-size: 14px;
 }

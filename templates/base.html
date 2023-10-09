@@ -4,7 +4,6 @@
 <html>
 <head>
   <title>HOBO 55+ Division</title>
-  <link href="{% static 'fontawesomefree/css/all.css' %}" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
   <script src="{% static 'jquery.js' %}"></script>
   {% include "fancybox/fancybox_css.html" %}
@@ -25,7 +24,7 @@
                 <li><a href="{% url 'albums' %}">Photo Albums</a></li>
                 <li><a href="{% url 'links' %}">Links</a></li>
               </ul>
-              <i class="fa-solid fa-caret-down"></i>
+              <div class="triangle"></div>
             </li>
             <li><a href="{% url 'divisions' %}">Divisions & Teams</a></li>
             <li><a href="{% url 'schedules' %}" >Schedules</a></li>
@@ -36,7 +35,7 @@
                 <li><a href="{% url 'howtoscore' %}">How to Score</a></li>
                 <li><a href="{% url 'obituary' %}">Bob Spence's Obituary</a></li>
               </ul>
-              <i class="fa-solid fa-caret-down"></i>
+              <div class="triangle"></div>
             </li>
           </ul>
         </nav>
@@ -50,16 +49,19 @@
         <div class="sidebar nunito">
           {% if user.is_authenticated %}
             <a href="#" class="styled-button green">
-              <i class="fa-solid fa-user"></i>
               {{ user.username }}
             </a>
-            <a href="{% url 'logout' %}" class="styled-button blue">Log Out</a>
-            <a href="{% url 'password_reset' %}" class="styled-button red">Reset Password</a>
+            <div class="flex pushofftop">
+              <a href="{% url 'logout' %}" class="styled-button blue fifty">Log Out</a>
+              <a href="{% url 'password_reset' %}" class="styled-button red fifty">Reset Password</a>
+            </div>
           {% else %}
             <a href="{% url 'login' %}" class="styled-button blue">Log In</a>
+            <div class="flex pushofftop"></div>
+            <a href="{% url 'signup' %}" class="styled-button green">Sign Up</a>
           {% endif %}
         </div>
-        <div class="sidebar nunito">
+        <div class="sidebar nunito contact">
           <table>
             <tr>
                 <th>Name</th>
